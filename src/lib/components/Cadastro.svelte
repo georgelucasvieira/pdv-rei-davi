@@ -14,7 +14,7 @@
         
         const codigo = Math.random().toString(36).substring(2, 6).toUpperCase();
 
-        const res = await fetch("/cadastro", {
+        const res = await fetch("/api/cadastro", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nome, quantidade, codigo }),

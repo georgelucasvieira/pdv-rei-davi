@@ -6,7 +6,7 @@
   let resultado = [];
 
   async function consultar() {
-    const res = await fetch(`/consulta?codigo=${codigo.toUpperCase()}`);
+    const res = await fetch(`/api/consulta?codigo=${codigo.toUpperCase()}`);
     if (res.ok) {
       const data = await res.json();
       resultado = Array.isArray(data) ? data : [data];
